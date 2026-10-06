@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 메인 홈 -->
+  <url>
+    <loc>https://alsals018018-del.github.io/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <!-- 1. 확률 계산법 -->
+  <url>
+    <loc>https://alsals018018-del.github.io/odds.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- 2. 포지션 가이드 -->
+  <url>
+    <loc>https://alsals018018-del.github.io/position.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- 3. 실전 용어사전 -->
+  <url>
+    <loc>https://alsals018018-del.github.io/glossary.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- 4. 토너먼트 공략 -->
+  <url>
+    <loc>https://alsals018018-del.github.io/tournament.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- 5. 벳 사이징 & 블러핑 -->
+  <url>
+    <loc>https://alsals018018-del.github.io/betting.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
