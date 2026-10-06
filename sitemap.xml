@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- 메인 홈 -->
+  <!-- 홈 메인 -->
   <url>
-    <loc>https://alsals018018-del.github.io/</loc>
+    <loc>https://alsals018018-del-github-io.pages.dev/</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- 1. 확률 계산법 -->
+  <!-- 1. 확률 가이드 -->
   <url>
-    <loc>https://alsals018018-del.github.io/odds.html</loc>
+    <loc>https://alsals018018-del-github-io.pages.dev/odds.html</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 2. 포지션 가이드 -->
   <url>
-    <loc>https://alsals018018-del.github.io/position.html</loc>
+    <loc>https://alsals018018-del-github-io.pages.dev/position.html</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- 3. 실전 용어사전 -->
+  <!-- 3. 실전 용어집 -->
   <url>
-    <loc>https://alsals018018-del.github.io/glossary.html</loc>
+    <loc>https://alsals018018-del-github-io.pages.dev/glossary.html</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- 4. 토너먼트 공략 -->
+  <!-- 4. 토너먼트 전략 -->
   <url>
-    <loc>https://alsals018018-del.github.io/tournament.html</loc>
+    <loc>https://alsals018018-del-github-io.pages.dev/tournament.html</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- 5. 벳 사이징 & 블러핑 -->
+  <!-- 5. 베팅 & 블러핑 -->
   <url>
-    <loc>https://alsals018018-del.github.io/betting.html</loc>
+    <loc>https://alsals018018-del-github-io.pages.dev/betting.html</loc>
     <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
