@@ -7,6 +7,13 @@
     <title>황제 홀덤 전략 연구소 | 텍사스 홀덤 실전 가이드 & 데이터 허브</title>
     <meta name="description" content="텍사스 홀덤 수학적 확률 분석, 스타팅 핸드 레인지 매트릭스, 포지션별 실전 운영 가이드 및 공식 데이터 센터.">
     <link rel="canonical" href="https://hwangje-holdem.isweb.co.kr/">
+
+    <!-- 소셜 및 구글 검색 최적화 Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="황제 홀덤 전략 연구소 | 텍사스 홀덤 실전 가이드">
+    <meta property="og:description" content="수학적 팟 오즈 계산법, 포지션별 169개 핸드 레인지 및 실전 토너먼트 공략 가이드">
+    <meta property="og:url" content="https://hwangje-holdem.isweb.co.kr/">
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -25,6 +32,7 @@
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             border: 1px solid #334155;
+            box-sizing: border-box;
         }
         h1 {
             color: #fbbf24;
@@ -43,7 +51,7 @@
             color: #cbd5e1;
         }
         .btn-box {
-            margin: 35px 0 20px;
+            margin: 35px 0 25px;
             text-align: center;
         }
         .main-btn {
@@ -63,16 +71,55 @@
             box-shadow: 0 6px 20px rgba(217, 119, 6, 0.6);
         }
         .network-links {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #334155;
-            font-size: 14px;
-            color: #94a3b8;
+            margin-top: 25px;
+            padding: 22px;
+            background: #0f172a;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            text-align: center;
         }
-        .network-links a {
+        .network-grid {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            justify-content: center;
+            align-items: center;
+        }
+        .network-grid a {
             color: #38bdf8;
             text-decoration: none;
-            margin-right: 15px;
+            font-size: 14px;
+            transition: color 0.15s ease;
+        }
+        .network-grid a:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+        .network-grid .divider {
+            color: #475569;
+            font-size: 12px;
+        }
+        .archive-box {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #334155;
+        }
+        .archive-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0 0 0;
+            line-height: 2.2;
+        }
+        .archive-list a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.15s ease;
+        }
+        .archive-list a:hover {
+            color: #fbbf24;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -85,32 +132,46 @@
         <p>장기적인 승률을 결정짓는 핵심은 핸드의 절대적 밸류가 아니라 '포지션(Position)'과 '수학적 팟 오즈(Pot Odds)'의 정밀한 결합에 있습니다. 버튼(BTN)과 컷오프(CO)에서의 정보적 우위를 극대화하고 프리플랍 레인지를 철저히 지키는 것이 위닝 플레이어의 기본 조건입니다.</p>
 
         <div class="btn-box">
-            <a href="https://hwangje-holdem.isweb.co.kr/" class="main-btn" target="_blank">황제 홀덤 공식 웹사이트 & 데이터 센터 바로가기 ♠</a>
+            <a href="https://hwangje-holdem.isweb.co.kr/" class="main-btn" target="_blank" rel="noopener noreferrer">황제 홀덤 공식 웹사이트 & 데이터 센터 바로가기 ♠</a>
         </div>
+
         <!-- 공식 브랜드 네트워크 링크 허브 -->
-    <div class="network-links" style="line-height: 2.2; font-size: 14px; margin-top: 25px; padding: 20px; background: #0f172a; border-radius: 8px; border: 1px solid #334155; text-align: center;">
-      <strong style="color: #f59e0b; font-size: 15px;">🌐 황제 홀덤 공식 브랜드 네트워크</strong><br>
-      <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px 14px; justify-content: center;">
-        <a href="https://hwangje-holdem.isweb.co.kr/" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">공식 허브</a> |
-        <a href="https://www.youtube.com/@HwangjeHoldem" target="_blank" style="color: #38bdf8; text-decoration: none;">유튜브</a> |
-        <a href="https://x.com/hwangje_holdem" target="_blank" style="color: #38bdf8; text-decoration: none;">X (트위터)</a> |
-        <a href="https://hwangje-holdem.tistory.com/" target="_blank" style="color: #38bdf8; text-decoration: none;">티스토리</a> |
-        <a href="https://blog.naver.com/hwangjeholdem" target="_blank" style="color: #38bdf8; text-decoration: none;">네이버 블로그</a> |
-        <a href="https://cafe.naver.com/hwangjeholdem" target="_blank" style="color: #38bdf8; text-decoration: none;">네이버 카페</a> |
-        <a href="https://cafe.daum.net/hwangje-holdem" target="_blank" style="color: #38bdf8; text-decoration: none;">다음 카페</a> |
-        <a href="https://medium.com/@alsals018018" target="_blank" style="color: #38bdf8; text-decoration: none;">미디엄</a> |
-        <a href="https://kr.pinterest.com/alsals018018/" target="_blank" style="color: #38bdf8; text-decoration: none;">핀터레스트</a>
-      </div>
+        <div class="network-links">
+            <strong style="color: #f59e0b; font-size: 15px;">🌐 황제 홀덤 공식 브랜드 네트워크</strong>
+            <div class="network-grid">
+                <a href="https://hwangje-holdem.isweb.co.kr/" target="_blank" rel="noopener noreferrer" style="color: #fbbf24; font-weight: bold;">공식 허브</a>
+                <span class="divider">|</span>
+                <a href="https://www.youtube.com/@HwangjeHoldem" target="_blank" rel="noopener noreferrer">유튜브</a>
+                <span class="divider">|</span>
+                <a href="https://x.com/hwangje_holdem" target="_blank" rel="noopener noreferrer">X (트위터)</a>
+                <span class="divider">|</span>
+                <a href="https://hwangje-holdem.tistory.com/" target="_blank" rel="noopener noreferrer">티스토리</a>
+                <span class="divider">|</span>
+                <a href="https://blog.naver.com/hwangjeholdem" target="_blank" rel="noopener noreferrer">네이버 블로그</a>
+                <span class="divider">|</span>
+                <a href="https://cafe.naver.com/hwangjeholdem" target="_blank" rel="noopener noreferrer">네이버 카페</a>
+                <span class="divider">|</span>
+                <a href="https://cafe.daum.net/hwangje-holdem" target="_blank" rel="noopener noreferrer">다음 카페</a>
+                <span class="divider">|</span>
+                <a href="https://medium.com/@alsals018018" target="_blank" rel="noopener noreferrer">미디엄</a>
+                <span class="divider">|</span>
+                <a href="https://kr.pinterest.com/alsals018018/" target="_blank" rel="noopener noreferrer">핀터레스트</a>
+                <span class="divider">|</span>
+                <a href="https://t.me/emperor_holdem_bot" target="_blank" rel="noopener noreferrer" style="color: #38bdf8;">텔레그램 문의</a>
+            </div>
+        </div>
+
+        <!-- 실전 전략 아카이브 -->
+        <div class="archive-box">
+            <h3 style="color: #f59e0b; margin: 0; font-size: 17px;">📚 황제 홀덤 실전 전략 아카이브</h3>
+            <ul class="archive-list">
+                <li>👉 <a href="odds.html">3초 실전 확률 계산법 (2와 4의 법칙)</a></li>
+                <li>👉 <a href="position.html">포지션별 스타팅 핸드 레인지 공략 가이드</a></li>
+                <li>👉 <a href="glossary.html">텍사스 홀덤 실전 필수 용어사전 총정리</a></li>
+                <li>👉 <a href="tournament.html">텍사스 홀덤 토너먼트(MTT) 실전 공략 가이드</a></li>
+                <li>👉 <a href="betting.html">텍사스 홀덤 실전 벳 사이징 & 블러핑 완벽 공략</a></li>
+            </ul>
+        </div>
     </div>
-      <h3 style="color: #f59e0b; margin: 0 0 12px 0; font-size: 17px;">📚 황제 홀덤 실전 전략 아카이브</h3>
-      <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 2.2;">
-        <li>👉 <a href="odds.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">3초 실전 확률 계산법 (2와 4의 법칙)</a></li>
-        <li>👉 <a href="position.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">포지션별 스타팅 핸드 레인지 공략 가이드</a></li>
-        <li>👉 <a href="glossary.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">텍사스 홀덤 실전 필수 용어사전 총정리</a></li>
-        <li>👉 <a href="tournament.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">텍사스 홀덤 토너먼트(MTT) 실전 공략 가이드</a></li>
-        <li>👉 <a href="betting.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">텍사스 홀덤 실전 벳 사이징 & 블러핑 완벽 공략</a></li>
-      </ul>
-    </div>
-  </div>
 </body>
 </html>
