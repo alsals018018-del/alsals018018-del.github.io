@@ -3,68 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>텍사스 홀덤 실전 벳 사이징 & 블러핑 완벽 공략 | 황제 홀덤 전략 연구소</title>
-  <meta name="description" content="텍사스 홀덤 실전 벳 사이징(Bet Sizing) 공식과 세미 블러핑(Semi-Bluffing) 타이밍 완벽 가이드: 밸류 벳, 팟 지분 압박, 리버 블러프 탈출법.">
+  <title>실전 벳 사이징 & 블러핑 완벽 공략 | 황제 홀덤 전략 연구소</title>
+  <meta name="description" content="드라이 vs 웻 보드 텍스처 판독, C-Bet(컨티뉴에이션 베팅) 사이징 공식과 블러프 캐칭 노하우.">
+  <link rel="canonical" href="https://hwangje-holdem.isweb.co.kr/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="실전 벳 사이징 & 블러핑 완벽 공략">
+  <meta property="og:description" content="수학적 기대값을 극대화하는 보드별 벳 사이징과 블러프 캐칭 신호 분석">
+  <meta property="og:url" content="https://hwangje-holdem.isweb.co.kr/">
+
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; line-height: 1.7; }
-    .container { max-width: 800px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 12px; border: 1px solid #334155; }
-    h1 { color: #f59e0b; font-size: 26px; border-bottom: 2px solid #f59e0b; padding-bottom: 10px; }
+    .container { max-width: 800px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 12px; border: 1px solid #334155; box-sizing: border-box; }
+    .top-nav { margin-bottom: 20px; font-size: 14px; }
+    .top-nav a { color: #38bdf8; text-decoration: none; }
+    .top-nav a:hover { text-decoration: underline; }
+    h1 { color: #f59e0b; font-size: 26px; border-bottom: 2px solid #f59e0b; padding-bottom: 12px; margin-top: 10px; }
     h2 { color: #38bdf8; font-size: 20px; margin-top: 30px; }
     p, li { font-size: 16px; color: #cbd5e1; }
-    .card { background: #0f172a; padding: 20px; border-radius: 8px; border: 1px solid #334155; margin: 15px 0; }
-    .highlight { color: #f59e0b; font-weight: bold; }
-    .btn-box { text-align: center; margin: 35px 0; }
-    .btn { display: inline-block; background: #f59e0b; color: #000; font-weight: bold; padding: 12px 25px; border-radius: 8px; text-decoration: none; margin: 5px; }
-    .btn-tg { background: #0ea5e9; color: #fff; }
-    .btn:hover { opacity: 0.9; }
-    .footer { font-size: 14px; color: #94a3b8; text-align: center; margin-top: 40px; border-top: 1px solid #334155; padding-top: 20px; }
-    a.link { color: #38bdf8; text-decoration: none; }
+    .highlight { background: #334155; padding: 18px; border-radius: 8px; border-left: 4px solid #a855f7; margin: 20px 0; }
+    .btn-box { text-align: center; margin: 35px 0 25px; }
+    .btn { display: inline-block; background: #f59e0b; color: #000; font-weight: bold; padding: 13px 26px; border-radius: 8px; text-decoration: none; margin: 6px; transition: transform 0.15s ease, opacity 0.15s ease; }
+    .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    .footer { font-size: 14px; color: #94a3b8; text-align: center; margin-top: 40px; border-top: 1px solid #334155; padding-top: 25px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 12px; justify-content: center; margin-top: 10px; }
+    .footer-links a { color: #38bdf8; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+    .divider { color: #475569; font-size: 12px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>텍사스 홀덤 실전 벳 사이징 & 블러핑 가이드</h1>
-    <p>홀덤에서 베팅은 단순히 칩을 넣는 행위가 아니라, 상대방에게 불리한 수학적 확률(오즈)을 강요하고 내 핸드의 최대 이익(EV)을 이끌어내는 전략적 도구입니다.</p>
-
-    <h2>1. 상황별 표준 벳 사이징(Bet Sizing) 규칙</h2>
-    
-    <div class="card">
-      <h3 style="color:#f59e0b; margin-top:0;">① 드라이 보드 (Dry Board) ➔ 팟의 25% ~ 33% (스몰 벳)</h3>
-      <p>• 예: K♠ 8♦ 2♣ 같이 스트레이트나 플러시 가능성이 희박한 보드.<br>
-      • 상대방이 핸드를 맞추지 못했을 확률이 높으므로, 작은 사이즈의 컨티뉴에이션 벳(C-bet)만으로도 충분한 폴드 에쿼티를 가져올 수 있습니다.</p>
+    <div class="top-nav">
+      <a href="index.html">← 연구소 메인 허브로 돌아가기</a>
     </div>
 
-    <div class="card">
-      <h3 style="color:#38bdf8; margin-top:0;">② 웻 보드 (Wet Board) ➔ 팟의 66% ~ 75% 이상 (라지 벳)</h3>
-      <p>• 예: J♠ 10♠ 9♦ 같이 수많은 드로우가 얽혀 있는 보드.<br>
-      • 상대방의 플러시 드로우나 양방 스트레이트 드로우에 나쁜 콜 확률(오즈)을 강요하여 팟 지분을 방어해야 합니다.</p>
+    <h1>텍사스 홀덤 실전 벳 사이징 & 블러핑 완벽 공략</h1>
+    <p>단순히 '내 패가 좋아서' 팟을 키우는 베팅은 상대에게 모든 정보를 넘겨주는 하수 플레이입니다. 보드의 질감과 레인지 우위에 따라 정밀하게 사이징을 설계해야 합니다.</p>
+
+    <div class="highlight">
+      <strong>보드 텍스처별 표준 C-Bet 가이드라인:</strong><br>
+      • <strong>드라이 보드 (A-7-2 등):</strong> 팟의 25% ~ 33% 스몰 벳으로 높은 빈도 공격<br>
+      • <strong>웻 / 커넥티드 보드 (Q-J-8 등):</strong> 팟의 66% ~ 75% 라지 벳으로 드로우 차단<br>
+      • <strong>모노톤 보드 (단일 무늬 3장):</strong> 33% 이하 소액 벳 또는 체크 백으로 리스크 관리
     </div>
 
-    <div class="card">
-      <h3 style="color:#ef4444; margin-top:0;">③ 리버 밸류 벳 vs 씬 밸류 (Thin Value)</h3>
-      <p>• 너트급 최강 핸드일 때는 상대가 콜할 수 있는 최대 사이즈(75%~오버벳)를 선택합니다.<br>
-      • 중간 세기의 메이드 핸드로 상대의 세컨드 페어 콜을 유도할 때는 30%~40%의 부담 없는 사이즈로 유혹합니다.</p>
-    </div>
-
-    <h2>2. 성공률을 높이는 세미 블러핑(Semi-Bluff)의 원리</h2>
-    <ul>
-      <li><strong>순수 블러프(Stone-cold Bluff) 지양:</strong> 아무런 발전 가능성이 없는 패로 치는 블러프는 장기적으로 손실을 부릅니다.</li>
-      <li><strong>아웃츠(Outs)가 있는 세미 블러프 활용:</strong> 플러시 드로우나 것샷/오픈엔디드 스트레이트 드로우처럼 '상대가 폴드하면 팟을 즉시 먹고, 콜을 받아도 다음 턴/리버에서 역전할 기회'가 있는 패로 베팅을 주도해야 합니다.</li>
-      <li><strong>블로커(Blocker) 파악:</strong> 상대가 너트 플러시를 만들 수 있는 에이스(A♠ 등) 카드를 내가 들고 있을 때 과감한 블러프를 실행하면 성공률이 대폭 상승합니다.</li>
-    </ul>
+    <h2>블러프 캐칭(Bluff Catcher) 3대 판단 기준</h2>
+    <p>리버에서 상대가 큰 베팅을 넣었을 때 내가 이길 수 있는 패가 '오직 상대의 블러핑'뿐이라면, 상대의 베팅 라인이 스토리와 맞는지, 미스된 드로우가 많은 보드인지 분석하여 냉정하게 콜 여부를 판단해야 합니다.</p>
 
     <div class="btn-box">
-      <a href="https://hwangje-holdem.isweb.co.kr/" class="btn" target="_blank">황제 홀덤 공식 전략 데이터센터 ♠</a>
-      <a href="https://t.me/emperor_holdem_bot" class="btn btn-tg" target="_blank">실시간 전략 텔레그램 봇</a>
+      <a href="https://hwangje-holdem.isweb.co.kr/" class="btn" target="_blank" rel="noopener noreferrer">황제 홀덤 전략 연구소 본 사이트 바로가기</a>
     </div>
 
     <div class="footer">
-      <p>황제 홀덤 전략 연구소 공식 채널</p>
-      <p>
-        <a href="index.html" class="link">메인 홈으로 이동</a> | 
-        <a href="https://hwangje-holdem.isweb.co.kr/" class="link">공식 웹사이트</a> | 
-        <a href="https://cafe.naver.com/hwangjeholdem" class="link">네이버 공식 카페</a>
-      </p>
+      <p style="margin: 0; font-weight: bold; color: #f59e0b;">황제 홀덤 전략 연구소 공식 채널 네트워크</p>
+      <div class="footer-links">
+        <a href="index.html" style="font-weight: bold; color: #fbbf24;">전략 허브 홈</a>
+        <span class="divider">|</span>
+        <a href="https://hwangje-holdem.isweb.co.kr/" target="_blank" rel="noopener noreferrer">공식 웹사이트</a>
+        <span class="divider">|</span>
+        <a href="https://cafe.naver.com/hwangjeholdem" target="_blank" rel="noopener noreferrer">네이버 카페</a>
+        <span class="divider">|</span>
+        <a href="https://cafe.daum.net/hwangje-holdem" target="_blank" rel="noopener noreferrer">다음 카페</a>
+        <span class="divider">|</span>
+        <a href="https://blog.naver.com/hwangjeholdem" target="_blank" rel="noopener noreferrer">네이버 블로그</a>
+        <span class="divider">|</span>
+        <a href="https://hwangje-holdem.tistory.com/" target="_blank" rel="noopener noreferrer">티스토리</a>
+        <span class="divider">|</span>
+        <a href="https://medium.com/@alsals018018" target="_blank" rel="noopener noreferrer">미디엄</a>
+        <span class="divider">|</span>
+        <a href="https://kr.pinterest.com/alsals018018/" target="_blank" rel="noopener noreferrer">핀터레스트</a>
+        <span class="divider">|</span>
+        <a href="https://x.com/hwangje_holdem" target="_blank" rel="noopener noreferrer">X (트위터)</a>
+      </div>
     </div>
   </div>
 </body>
