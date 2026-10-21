@@ -7,30 +7,88 @@
   <meta name="description" content="WPL 및 오프라인 토너먼트 딥스택 초반 운영, 버블 구간 칩리더 어뷰징, 15BB 숏스택 푸시폴드 차트.">
   <link rel="canonical" href="https://hwangje-holdem.isweb.co.kr/tournament">
 
+  <!-- 구글 SEO 구조화 데이터 Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "텍사스 홀덤 토너먼트(MTT) 필승 전략 & ICM 모델",
+    "description": "딥스택 운영, 머니인(ITM) 버블 팩터, 15BB 이하 푸시-폴드 차트 및 파이널 테이블 헤즈업 공략",
+    "author": {
+      "@type": "Organization",
+      "name": "황제 홀덤 전략 연구소",
+      "url": "https://hwangje-holdem.isweb.co.kr/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "토너먼트에서 ICM(독립 칩 모델)이 중요한 이유는 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "캐시게임과 달리 토너먼트에서는 잃은 칩의 실질적 상금 가치가 얻은 칩보다 항상 크기 때문입니다. 탈락 리스크를 고려하여 불필요한 코인플립 싸움을 피하고 생존 에퀴티를 극대화해야 합니다."
+      }
+    }, {
+      "@type": "Question",
+      "name": "스택이 15BB 이하일 때 미니 레이즈를 치면 안 되는 이유는 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "미니 레이즈 후 상대의 3-Bet 올인에 패를 접으면 잔여 스택의 20% 이상을 허무하게 날리게 됩니다. 상대의 폴드 에퀴티를 극대화하기 위해 오직 '올인(Push)' 또는 '폴드(Fold)'만 선택하는 것이 수학적 정답입니다."
+      }
+    }]
+  }
+  </script>
+
+  <!-- 소셜 및 검색 최적화 Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="토너먼트(MTT) 필승 전략 & ICM 모델">
+  <meta property="og:title" content="토너먼트(MTT) 필승 전략 & ICM 모델 | 황제 홀덤 전략 연구소">
   <meta property="og:description" content="캐시게임과 완전히 다른 토너먼트 칩 가치 모델과 파이널 테이블 생존 공식">
   <meta property="og:url" content="https://hwangje-holdem.isweb.co.kr/tournament">
 
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; line-height: 1.7; }
-    .container { max-width: 800px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 12px; border: 1px solid #334155; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 30px 15px; line-height: 1.8; }
+    .container { max-width: 820px; margin: 0 auto; background: #1e293b; padding: 35px 25px; border-radius: 14px; border: 1px solid #334155; box-sizing: border-box; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
     .top-nav { margin-bottom: 20px; font-size: 14px; }
-    .top-nav a { color: #38bdf8; text-decoration: none; }
-    .top-nav a:hover { text-decoration: underline; }
-    h1 { color: #f59e0b; font-size: 26px; border-bottom: 2px solid #f59e0b; padding-bottom: 12px; margin-top: 10px; }
-    h2 { color: #38bdf8; font-size: 20px; margin-top: 30px; }
-    p, li { font-size: 16px; color: #cbd5e1; }
-    .highlight { background: #334155; padding: 18px; border-radius: 8px; border-left: 4px solid #10b981; margin: 20px 0; }
-    .btn-box { text-align: center; margin: 35px 0 25px; }
-    .btn { display: inline-block; background: #f59e0b; color: #000; font-weight: bold; padding: 13px 26px; border-radius: 8px; text-decoration: none; margin: 6px; transition: transform 0.15s ease, opacity 0.15s ease; }
-    .btn:hover { opacity: 0.9; transform: translateY(-1px); }
-    .footer { font-size: 14px; color: #94a3b8; text-align: center; margin-top: 40px; border-top: 1px solid #334155; padding-top: 25px; }
+    .top-nav a { color: #38bdf8; text-decoration: none; font-weight: 600; }
+    .top-nav a:hover { text-decoration: underline; color: #7dd3fc; }
+    h1 { color: #fbbf24; font-size: 25px; border-bottom: 2px solid #334155; padding-bottom: 14px; margin-top: 10px; letter-spacing: -0.5px; }
+    h2 { color: #38bdf8; font-size: 19px; margin-top: 30px; }
+    p, li { font-size: 15px; color: #cbd5e1; }
+    .highlight { background: #0f172a; padding: 20px; border-radius: 10px; border-left: 4px solid #10b981; margin: 22px 0; border: 1px solid #334155; border-left-width: 4px; }
+    
+    .btn-box { text-align: center; margin: 30px 0 25px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn-main { display: inline-block; background: linear-gradient(135deg, #f59e0b, #d97706); color: #000; font-weight: 800; padding: 13px 26px; border-radius: 30px; text-decoration: none; font-size: 15px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35); transition: transform 0.15s ease; }
+    .btn-play { display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color: #fff; font-weight: 800; padding: 13px 26px; border-radius: 30px; text-decoration: none; font-size: 15px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35); transition: transform 0.15s ease; }
+    .btn-main:hover, .btn-play:hover { transform: translateY(-2px); }
+
+    /* VIP 고객센터 카드 */
+    .vip-card-box { background: #0f172a; border: 2px solid #3b82f6; border-radius: 12px; padding: 22px 18px; margin: 30px 0; text-align: center; }
+    .vip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 15px; text-align: left; }
+    .vip-item { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 14px; text-decoration: none; color: #ffffff; display: block; transition: all 0.2s ease; }
+    .vip-item:hover { border-color: #38bdf8; transform: translateY(-2px); }
+
+    .footer { font-size: 13.5px; color: #94a3b8; text-align: center; margin-top: 35px; border-top: 1px solid #334155; padding-top: 25px; line-height: 2; }
     .footer-links { display: flex; flex-wrap: wrap; gap: 8px 12px; justify-content: center; margin-top: 10px; }
     .footer-links a { color: #38bdf8; text-decoration: none; }
-    .footer-links a:hover { text-decoration: underline; }
+    .footer-links a:hover { text-decoration: underline; color: #7dd3fc; }
     .divider { color: #475569; font-size: 12px; }
   </style>
+
+  <script>
+    function copyKakaoId(e) {
+      if (e) e.preventDefault();
+      navigator.clipboard.writeText('tto9981tto').then(function() {
+        alert('카카오톡 ID (tto9981tto)가 복사되었습니다.\n카카오톡 친구 추가에서 ID로 검색해 주세요.');
+      }).catch(function() {
+        prompt('아래 카카오톡 ID를 복사하여 친구 추가하세요:', 'tto9981tto');
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -39,42 +97,95 @@
     </div>
 
     <h1>텍사스 홀덤 토너먼트(MTT) 실전 공략 가이드</h1>
-    <p>토너먼트는 잃은 칩의 가치가 얻은 칩의 가치보다 훨씬 큰 <strong>ICM(독립 칩 모델)</strong>의 지배를 받습니다. 탈락을 피하고 파이널 테이블로 진출하는 실전 생존 공식을 적용해야 합니다.</p>
+    <p>토너먼트는 잃은 칩의 가치가 얻은 칩의 가치보다 훨씬 큰 <strong>ICM(독립 칩 모델)</strong>의 지배를 받습니다. 무리한 탈락을 방지하고 파이널 테이블로 진출하기 위한 단계별 생존 공식을 적용해야 합니다.</p>
 
     <div class="highlight">
-      <strong>토너먼트 3단계 핵심 운영 팁:</strong><br>
-      • <strong>초반 딥스택 (100BB+):</strong> 투기적 핸드(수딧 커넥터)로 잠재 오즈 노리기, 무리한 올인 싸움 회피<br>
-      • <strong>머니인(ITM) 버블:</strong> 칩리더로서 미들스택의 블라인드를 훔치는 어뷰징(Abuse) 극대화<br>
-      • <strong>15BB 이하 숏스택:</strong> 미니 레이즈 금지, 오직 '푸시(Push)' 또는 '폴드(Fold)' 2가지만 선택
+      <strong style="color: #34d399; font-size: 16px;">토너먼트 3단계 핵심 운영 팁:</strong>
+      <ul style="margin: 8px 0 0 0; padding-left: 20px; line-height: 1.8;">
+        <li><strong>초반 딥스택 (100BB+):</strong> 투기적 핸드(수딧 커넥터, 포켓 페어)로 잠재 오즈 노리기, 코인플립 올인 회피</li>
+        <li><strong>머니인(ITM) 버블:</strong> 칩리더로서 생존에 급급한 미들스택의 블라인드를 훔치는 어뷰징(Abuse) 극대화</li>
+        <li><strong>15BB 이하 숏스택:</strong> 일반 미니 레이즈 금지, 오직 '푸시(Push)' 또는 '폴드(Fold)' 2가지만 선택</li>
+      </ul>
     </div>
 
     <h2>파이널 테이블 헤즈업 우승 공식</h2>
-    <p>상금이 급격히 뛰는 파이널 테이블에서는 숏스택 플레이어들의 탈락 순번에 맞춰 안전하게 상금을 업그레이드하고, 헤즈업 상황에서는 넓은 오픈 레인지와 림프 팟 공략으로 칩 주도권을 가져와야 합니다.</p>
+    <p>상금이 비선형적으로 급등하는 파이널 테이블에서는 숏스택들의 탈락 순번에 맞춰 무리한 대결을 피하며 페이점프(Pay-jump)를 노립니다. 마지막 1:1 헤즈업에서는 넓은 오픈 레인지와 버튼 림프 팟 공략으로 칩 주도권을 장악해야 우승 트로피를 차지할 수 있습니다.</p>
 
+    <!-- 바로가기 CTA 버튼 -->
     <div class="btn-box">
-      <a href="https://hwangje-holdem.isweb.co.kr/tournament" class="btn" target="_blank" rel="noopener noreferrer">토너먼트 ICM 및 푸시폴드 차트 바로가기</a>
+      <a href="https://hwangje-holdem.isweb.co.kr/tournament" class="btn-main" target="_blank" rel="noopener noreferrer">공식 토너먼트 ICM 및 푸시폴드 차트 확인 ♠</a>
+      <a href="https://k-hd1.com" class="btn-play" target="_blank" rel="noopener noreferrer">무료 실전 연습게임 (k-hd1.com) ↗</a>
     </div>
 
+    <!-- 1:1 VIP 실시간 소통 센터 -->
+    <div class="vip-card-box">
+      <span style="background-color: #ef4444; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 12px; display: inline-block; margin-bottom: 6px;">실시간 토너먼트 분석 지원</span>
+      <h3 style="color: #facc15; font-size: 18px; font-weight: 800; margin: 0 0 6px 0;">
+        👑 황제홀덤 VIP 1:1 데스크 & 토너먼트 핸드 복기
+      </h3>
+      <p style="color: #94a3b8; font-size: 13px; margin: 0;">
+        WPL 및 오프라인 토너먼트 파이널 테이블 핸드 복기와 푸시/폴드 차트 신청은 편하신 채널로 문의해 주세요.
+      </p>
+
+      <div class="vip-grid">
+        <!-- 인포크 카드 -->
+        <a href="https://link.inpock.co.kr/emperor_sports" target="_blank" rel="noopener noreferrer" class="vip-item">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-weight: 800; font-size: 14px; color: #f59e0b;">⚡ 인포크 링크 센터</span>
+            <span style="font-size: 10.5px; background: rgba(245,158,11,0.2); color: #fbbf24; padding: 2px 5px; border-radius: 4px;">공식허브</span>
+          </div>
+          <p style="margin: 0; font-size: 12px; color: #94a3b8; line-height: 1.5;">모든 SNS 채널 및 공략 가이드 링크를 한눈에 모아보는 통합 창구입니다.</p>
+        </a>
+
+        <!-- 텔레그램 카드 -->
+        <a href="https://t.me/tto9981tto" target="_blank" rel="noopener noreferrer" class="vip-item">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-weight: 800; font-size: 14px; color: #38bdf8;">✈️ 텔레그램 1:1 상담</span>
+            <span style="font-size: 10.5px; background: rgba(56,189,248,0.2); color: #7dd3fc; padding: 2px 5px; border-radius: 4px;">가장 빠름</span>
+          </div>
+          <p style="margin: 0; font-size: 12px; color: #94a3b8; line-height: 1.5;">아이디 <strong>@tto9981tto</strong> 직통. 실시간 핸드 피드백 및 레인지 표를 제공합니다.</p>
+        </a>
+
+        <!-- 카카오톡 카드 -->
+        <div onclick="copyKakaoId(event);" class="vip-item" style="cursor: pointer;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-weight: 800; font-size: 14px; color: #facc15;">💬 카카오톡 친구추가</span>
+            <span style="font-size: 10.5px; background: rgba(250,204,21,0.2); color: #fde047; padding: 2px 5px; border-radius: 4px;">ID 복사</span>
+          </div>
+          <p style="margin: 0; font-size: 12px; color: #94a3b8; line-height: 1.5;">카톡 ID: <strong>tto9981tto</strong><br>(클릭 시 ID가 자동 복사됩니다.)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 공식 네트워크 푸터 -->
     <div class="footer">
-      <p style="margin: 0; font-weight: bold; color: #f59e0b;">황제 홀덤 전략 연구소 공식 채널 네트워크</p>
+      <p style="margin: 0 0 6px 0; font-weight: bold; color: #f59e0b;">황제 홀덤 전략 연구소 공식 채널 네트워크</p>
       <div class="footer-links">
         <a href="index.html" style="font-weight: bold; color: #fbbf24;">전략 허브 홈</a>
         <span class="divider">|</span>
         <a href="https://hwangje-holdem.isweb.co.kr/" target="_blank" rel="noopener noreferrer">공식 웹사이트</a>
         <span class="divider">|</span>
-        <a href="https://cafe.naver.com/hwangjeholdem" target="_blank" rel="noopener noreferrer">네이버 카페</a>
+        <a href="https://link.inpock.co.kr/emperor_sports" target="_blank" rel="noopener noreferrer" style="color: #f59e0b; font-weight: bold;">인포크 센터</a>
         <span class="divider">|</span>
-        <a href="https://cafe.daum.net/hwangje-holdem" target="_blank" rel="noopener noreferrer">다음 카페</a>
+        <a href="https://t.me/tto9981tto" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: bold;">텔레그램 1:1</a>
+        <span class="divider">|</span>
+        <a href="https://www.youtube.com/@HwangjeHoldem" target="_blank" rel="noopener noreferrer">공식 유튜브</a>
+        <span class="divider">|</span>
+        <a href="https://www.instagram.com/tto9981tto/" target="_blank" rel="noopener noreferrer">인스타그램</a>
+        <span class="divider">|</span>
+        <a href="https://cafe.naver.com/hwangjeholdem" target="_blank" rel="noopener noreferrer">네이버 카페</a>
         <span class="divider">|</span>
         <a href="https://blog.naver.com/hwangjeholdem" target="_blank" rel="noopener noreferrer">네이버 블로그</a>
         <span class="divider">|</span>
+        <a href="https://cafe.daum.net/hwangje-holdem" target="_blank" rel="noopener noreferrer">다음 카페</a>
+        <span class="divider">|</span>
         <a href="https://hwangje-holdem.tistory.com/" target="_blank" rel="noopener noreferrer">티스토리</a>
+        <span class="divider">|</span>
+        <a href="https://x.com/hwangje_holdem" target="_blank" rel="noopener noreferrer">X (트위터)</a>
         <span class="divider">|</span>
         <a href="https://medium.com/@alsals018018" target="_blank" rel="noopener noreferrer">미디엄</a>
         <span class="divider">|</span>
         <a href="https://kr.pinterest.com/alsals018018/" target="_blank" rel="noopener noreferrer">핀터레스트</a>
-        <span class="divider">|</span>
-        <a href="https://x.com/hwangje_holdem" target="_blank" rel="noopener noreferrer">X (트위터)</a>
       </div>
     </div>
   </div>
